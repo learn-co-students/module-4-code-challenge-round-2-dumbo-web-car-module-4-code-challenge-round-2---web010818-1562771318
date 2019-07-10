@@ -27,7 +27,7 @@ class AccountContainer extends Component {
 
     let transArray = [...this.state.transactions]
     transArray = transArray.filter(trans => {
-      return trans.description.includes(this.state.searchTerm) || trans.category.includes(this.state.searchTerm)
+      return trans.description.toLowerCase().includes(this.state.searchTerm) || trans.category.toLowerCase().includes(this.state.searchTerm)
     })
 
 
