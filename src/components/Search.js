@@ -1,9 +1,12 @@
 import React from 'react'
 
-const Search = () => {
+const Search = (props) => {
+
+
   return (
     <div className="ui huge fluid icon input">
       <input
+        onChange={(event) => props.search(event.target.value)}
         type="text"
         placeholder={"Search your Recent Transactions"}
       />
