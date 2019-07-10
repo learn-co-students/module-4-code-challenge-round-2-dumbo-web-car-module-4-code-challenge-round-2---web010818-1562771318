@@ -3,14 +3,12 @@ import Transaction from './Transaction'
 
 class TransactionsList extends React.Component {
 
-  render(){
-    let transactions = this.props.transactionsList.map(transaction => (
-      <Transaction key={transaction.id} transaction={transaction} />
-    ))
+  //----------------RENDER TRANSATIONS COMPONENT-----------------
+  render() {
+    let transactions = this.props.transactionsList.map(transaction => (<Transaction key={transaction.id} transaction={transaction}/>))
     // console.log(this.props.transactionsList);
 
-  return (
-    <table className="ui celled striped padded table">
+    return (<table className="ui celled striped padded table">
       <tbody>
         <tr>
           <th>
@@ -35,15 +33,11 @@ class TransactionsList extends React.Component {
           </th>
         </tr>
 
-          {
-            transactions
-          }
-
-        {"... your code here..."}
+        {transactions}
 
       </tbody>
-    </table>
-  )
-}
+    </table>)
+  }
 
-}export default TransactionsList
+}
+export default TransactionsList
